@@ -132,7 +132,7 @@ const PassengerMode = () => {
     bookedRideInfo.fare=faree;
     bookedRideInfo.travelTime=travelTimee;
 
-    Axios.post("http://localhost:3001/api/bookedRideR/", bookedRideInfo).then((response)=>{alert("RIDE HAS BEEN BOOKED SUCCESSFULLY")})
+    Axios.post("http://54.199.85.193:3001/api/bookedRideR/", bookedRideInfo).then((response)=>{alert("RIDE HAS BEEN BOOKED SUCCESSFULLY")})
   }
   
 

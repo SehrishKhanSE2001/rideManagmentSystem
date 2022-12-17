@@ -55,7 +55,7 @@ export default class Home extends Component {
     }
     componentDidMount()
     {
-        axios.get("http://localhost:3001/getUsers").then(response => {
+        axios.get("http://54.199.85.193:3001/getUsers").then(response => {
             this.setState({requests: response.data})
             console.log(response.data);
         })
@@ -67,7 +67,7 @@ export default class Home extends Component {
     }
     CheckRequest(id)
     {
-        axios.get("http://localhost:3001/getUsers/"+id)
+        axios.get("http://54.199.85.193:3001/getUsers/"+id)
         .then(response => console.log("!!!!!"+response.data));
 
         this.setState({requests: this.state.requests.filter(el => el._id !== id )})
@@ -75,7 +75,7 @@ export default class Home extends Component {
     AcceptRequest(id)
     {    
         console.log(id);
-        axios.get("http://localhost:3001/getUsers/"+id).then(response => {
+        axios.get("http://54.199.85.193:3001/getUsers/"+id).then(response => {
             this.setState({
                 name:response.data.name,
                 phoneNumber:response.data.phoneNumber,
@@ -96,7 +96,7 @@ export default class Home extends Component {
                 fare:this.state.fare,
                 travelTime:this.state.travelTime
             }
-        axios.post("http://localhost:3001/store/"+id,excersie).then(response => console.log(response.data));
+        axios.post("http://54.199.85.193:3001/store/"+id,excersie).then(response => console.log(response.data));
            
 
         })

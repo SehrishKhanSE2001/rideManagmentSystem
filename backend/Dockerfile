@@ -2,8 +2,8 @@ FROM node:current-alpine
 WORKDIR /index
 
 COPY package*.json ./
-RUN npm install
+RUN npm i --legacy-peer-deps
 
 COPY . .
-EXPOSE 3001
+EXPOSE 8000
 CMD ["node", "index.js"]
